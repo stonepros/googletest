@@ -180,7 +180,7 @@ else
 endif
 
 # Build rules for libraries.
-lib_LTLIBRARIES = lib/libgtest.la lib/libgtest_main.la
+noinst_LTLIBRARIES = lib/libgtest.la lib/libgtest_main.la
 
 lib_libgtest_la_SOURCES = src/gtest-all.cc
 
@@ -223,7 +223,7 @@ lib_libgtest_main_la_LIBADD = lib/libgtest.la
 # TESTS -- Programs run automatically by "make check"
 # check_PROGRAMS -- Programs built by "make check" but not necessarily run
 
-noinst_LTLIBRARIES = samples/libsamples.la
+noinst_LTLIBRARIES += samples/libsamples.la
 
 samples_libsamples_la_SOURCES = \
   samples/sample1.cc \
